@@ -6,7 +6,7 @@ RUN \
   go build -o main ./main.go
 
 
-FROM alpine:3.15.0
+FROM alpine:3.15.1
 RUN adduser -h /app -D appuser
 WORKDIR /app
 COPY --from=builder /app/main .
